@@ -1,5 +1,6 @@
 - Added new variables departureStation2, destinationStation2 and stationSwapTime. If you want to see London Paddington's departures to start the day, then Derby after 3pm, well now you can!
-- Updated urls in balena.yml to point to this repo rather than the original.
+- Updated urls in balena.yml to point to this repo rather than the original to maintain the station swap functionality in the event of updates over at the main fork.
+- -all credit to those mentioned below and to [chrisys](https://github.com/chrisys) for creating and maintaining a fantastic project.
 
 ![](assets/full-logo.png)
 
