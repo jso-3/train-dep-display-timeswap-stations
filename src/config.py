@@ -56,6 +56,15 @@ def loadConfig():
     data["journey"]["screen1Platform"] = parsePlatformData(os.getenv("screen1Platform"))
     data["journey"]["screen2Platform"] = parsePlatformData(os.getenv("screen2Platform"))
 
+    # --- NEW CODE START ---
+    # Load the second station configuration
+    data["journey"]["departureStation2"] = os.getenv("departureStation2") or ""
+    
+    # Load the swap time (hour of day, 0-23). Default to None if not set.
+    swap_val = os.getenv("stationSwapTime")
+    data["journey"]["stationSwapTime"] = int(swap_val) if swap_val and swap_val.isnumeric() else None
+    # --- NEW CODE END ---
+
     data["api"]["apiKey"] = os.getenv("apiKey") or None
     data["api"]["operatingHours"] = os.getenv("operatingHours") or ""
 
