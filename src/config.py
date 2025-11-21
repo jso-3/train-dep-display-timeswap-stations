@@ -46,6 +46,12 @@ def loadConfig():
     if data["journey"]["destinationStation"] == "null" or data["journey"]["destinationStation"] == "undefined":
         data["journey"]["destinationStation"] = ""
 
+    # --- NEW CODE START ---
+    data["journey"]["destinationStation2"] = os.getenv("destinationStation2") or ""
+    if data["journey"]["destinationStation2"] == "null" or data["journey"]["destinationStation2"] == "undefined":
+        data["journey"]["destinationStation2"] = ""
+    # --- NEW CODE END ---
+
     data["journey"]["individualStationDepartureTime"] = False
     if os.getenv("individualStationDepartureTime", "").upper() == "TRUE":
         data["journey"]["individualStationDepartureTime"] = True
