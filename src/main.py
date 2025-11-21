@@ -591,6 +591,7 @@ try:
                         if config['dualScreen']:
                             virtual1 = drawDebugScreen(device1, width=widgetWidth, height=widgetHeight, showTime=True, screen="2")
                     else:
+                        print(f"Fetching data for: {config['journey']['departureStation']}")
                         data = loadData(config["api"], config["journey"], config)
                         if data[0] is False:
                             virtual = drawBlankSignage(
