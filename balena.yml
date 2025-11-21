@@ -16,20 +16,20 @@ post-provisioning: >-
 
   - **Dual display support**: Run two displays each showing departures from different platforms from a single Raspberry Pi.
 
-  ![](https://raw.githubusercontent.com/chrisys/train-departure-display/main/assets/blog-header.jpg)
-  ![](https://raw.githubusercontent.com/chrisys/train-departure-display/main/docs/images/completed-unit.jpg)
+  ![](https://raw.githubusercontent.com/jso-3/train-dep-display-timeswap-stations/main/assets/blog-header.jpg)
+  ![](https://raw.githubusercontent.com/jso-3/train-dep-display-timeswap-stations/main/docs/images/completed-unit.jpg)
 
   ## How to build
 
-  **Check out [the documentation](https://github.com/chrisys/train-departure-display/blob/main/docs/01-getting-started.md) for full hardware/software requirements and complete build guide.**
+  **Check out [the documentation](https://github.com/jso-3/train-dep-display-timeswap-stations/blob/main/docs/01-getting-started.md) for full hardware/software requirements and complete build guide.**
 
-  - [Getting Started](https://github.com/chrisys/train-departure-display/blob/main/docs/01-getting-started.md)
+  - [Getting Started](https://github.com/jso-3/train-dep-display-timeswap-stations/blob/main/docs/01-getting-started.md)
 
-  - [Connecting the display to the Pi](https://github.com/chrisys/train-departure-display/blob/main/docs/02-connecting-the-display-to-the-pi.md)
+  - [Connecting the display to the Pi](https://github.com/jso-3/train-dep-display-timeswap-stations/blob/main/docs/02-connecting-the-display-to-the-pi.md)
 
-  - [Assembling the Case](https://github.com/chrisys/train-departure-display/blob/main/docs/03-assembling-the-case.md)
+  - [Assembling the Case](https://github.com/jso-3/train-dep-display-timeswap-stations/blob/main/docs/03-assembling-the-case.md)
 
-  - [Configuration](https://github.com/chrisys/train-departure-display/blob/main/docs/04-configuration.md)
+  - [Configuration](https://github.com/jso-3/train-dep-display-timeswap-stations/blob/main/docs/04-configuration.md)
 
   ## Credits
 
@@ -42,7 +42,7 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/chrisys/train-departure-display'
+      url: 'https://github.com/jso-3/train-dep-display-timeswap-stations'
   logo:
     type: blob.asset
     data:
