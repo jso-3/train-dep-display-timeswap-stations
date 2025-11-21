@@ -497,13 +497,13 @@ def getVersionDate():
 try:
     print('Starting Train Departure Display v' + getVersionNumber())
 
+    config = loadConfig()
     # --- NEW CODE START ---
     # Store the original (morning) station so we can switch back to it
     primary_station = config["journey"]["departureStation"]
     primary_destination = config["journey"]["destinationStation"]
     # --- NEW CODE END ---
-    
-    config = loadConfig()
+
     if config['headless']:
         print('Headless mode, running main loop without serial comms')
         serial = noop()
