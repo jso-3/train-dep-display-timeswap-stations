@@ -1,3 +1,6 @@
+- Added new variables departureStation2, destinationStation2 and stationSwapTime. If you want to see London Paddington's departures to start the day, then Derby after 3pm, well now you can!
+- Updated urls in balena.yml to point to this repo rather than the original.
+
 ![](assets/full-logo.png)
 
 **A replica, near real-time, miniature UK railway station train departure sign based upon a Raspberry Pi Zero and 256x64 SPI OLED display(s). Uses the publicly available [OpenLDBWS API by National Rail Enquiries](https://www.nationalrail.co.uk/).**
