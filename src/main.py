@@ -496,6 +496,12 @@ def getVersionDate():
 
 try:
     print('Starting Train Departure Display v' + getVersionNumber())
+
+    # --- NEW CODE START ---
+    # Store the original (morning) station so we can switch back to it
+    primary_station = config["journey"]["departureStation"]
+    # --- NEW CODE END ---
+    
     config = loadConfig()
     if config['headless']:
         print('Headless mode, running main loop without serial comms')
@@ -557,6 +563,21 @@ try:
                     device1.clear()
                 time.sleep(10)
             else:
+                
+                # --- NEW CODE START ---
+                # Check if we need to swap stations based on time
+                if config["journey"]["departureStation2"] and config["journey"]["stationSwapTime"] is not None:
+                    current_hour = datetime.now().hour
+                    
+                    # If current time is after swap time (e.g. 15:00), use Station 2
+                    if current_hour >= config["journey"]["stationSwapTime"]:
+                        config["journey"]["departureStation"] = config["journey"]["departureStation2"]
+                    else:
+                        # Otherwise, ensure we are using Station 1 (PAD)
+                        # This handles the "next day" reset automatically since 07:00 < 15:00
+                        config["journey"]["departureStation"] = primary_station
+                # --- NEW CODE END ---
+                
                 if timeNow - timeFPS >= config['fpsTime']:
                     timeFPS = time.time()
                     print('Effective FPS: ' + str(round(regulator.effective_FPS(), 2)))
