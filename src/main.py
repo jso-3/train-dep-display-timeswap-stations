@@ -500,6 +500,7 @@ try:
     # --- NEW CODE START ---
     # Store the original (morning) station so we can switch back to it
     primary_station = config["journey"]["departureStation"]
+    primary_destination = config["journey"]["destinationStation"]
     # --- NEW CODE END ---
     
     config = loadConfig()
@@ -569,13 +570,14 @@ try:
                 if config["journey"]["departureStation2"] and config["journey"]["stationSwapTime"] is not None:
                     current_hour = datetime.now().hour
                     
-                    # If current time is after swap time (e.g. 15:00), use Station 2
+                    # Swap to Evening Settings
                     if current_hour >= config["journey"]["stationSwapTime"]:
                         config["journey"]["departureStation"] = config["journey"]["departureStation2"]
+                        config["journey"]["destinationStation"] = config["journey"]["destinationStation2"]
                     else:
-                        # Otherwise, ensure we are using Station 1 (PAD)
-                        # This handles the "next day" reset automatically since 07:00 < 15:00
+                        # Reset to Morning Settings
                         config["journey"]["departureStation"] = primary_station
+                        config["journey"]["destinationStation"] = primary_destination
                 # --- NEW CODE END ---
                 
                 if timeNow - timeFPS >= config['fpsTime']:
