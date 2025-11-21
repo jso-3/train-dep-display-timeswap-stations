@@ -57,6 +57,8 @@ data:
   applicationEnvironmentVariables:
     - TZ: Europe/London
     - departureStation: PAD
+    - departureStation2: MBR
+    - stationSwapTime: 15
     - outOfHoursName: London Paddington
     - refreshTime: 120
     - apiKey: UPDATE_ME
